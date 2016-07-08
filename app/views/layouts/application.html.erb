@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>BlogPortfolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Blake Griffin - Master Dunker, Kia Enthusiast</title>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header id="main_navigation" class="clearfix">
+      <%= link_to "Blake Griffin", posts_path, class: "name" %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <footer id="main_footer">
+      <p class="copyright">&copy;2016 Blake Griffin</p>
+      <nav>
+        <a href="https://www.google.com" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.google.com" target="_blank"><i class="fa fa-dribbble"></i></a>
+        <a href="https://www.google.com" target="_blank"><i class="fa fa-github"></i></a>
+      </nav>
+    </footer>
+
+  </body>
 </html>
