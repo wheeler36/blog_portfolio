@@ -1,0 +1,21 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+    <p>I'm the world's best dunker &amp; gajillion times All-Star living in Los Angeles, California.</p>
+    <p>By day I work as an amazing professional basketball player for the NBA, by night I drive my Kia around town looking fly and turning heads.</p>
+    <p>You can find me dunking on suckas, posterizing old men, and dominating the SportsCenter Top 10. I should just have my own segment</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Stuff I've Written</h2>
+    <hr>
+    <% @posts.each do |post| %>
+      <h3><a href="#"><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+  </div>
+  <div class="col-3 homepage_content">
+    <h2>Stuff I've Built</h2>
+    <hr>
+  </div>
+</div>
