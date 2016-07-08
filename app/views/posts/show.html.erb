@@ -1,8 +1,17 @@
-<%= @post.title %><br>
-<%= @post.content %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @post.title %></h1>
+    <hr>
+  </header>
 
-<br>
-<br>
+  <div id="content">
+    <%= markdown @post.content %>
+  </div>
 
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
+  <div id="admin_links">
+    <%= link_to "Edit", edit_post_path(@post) %>
+    <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
+  </div>
+
+</div>
